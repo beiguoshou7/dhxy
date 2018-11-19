@@ -138,7 +138,7 @@ $(function(){
         if (i<-400){
             i=0;
         }
-        $("ul").animate({left:i+"px"}
+        $(".gundong-box").animate({left:i+"px"}
             ,1)},30)
 
     /*   $(".cal-prev").click(function(){
