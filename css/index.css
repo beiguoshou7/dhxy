@@ -1039,18 +1039,18 @@ em, i {
     background-repeat: no-repeat;
 }
 
-.calendar-box .cal-prev, .calendar-box .cal-next {
+ .cal-prev,  .cal-next {
     position: absolute;
     width: 20px;
     height: 20px;
     bottom: 25px;
     background-image: url(../img/index_z_1fcd134.png);
 }
-.calendar-box .cal-prev {
+ .cal-prev {
     right: 62px;
     background-position: -667px -649px;
 }
-.calendar-box .cal-next {
+ .cal-next {
     right: 37px;
     background-position: -637px -649px;
 }
@@ -1130,4 +1130,29 @@ em, i {
 .weihuwanfa li.weihu-per04 i {
     background: url(../img/weihu-04_09ea308.png) center right no-repeat;
 }
-
+.bannerBox{
+    height: 100px;
+    width: 545px;
+    position: relative;
+}
+.ul2{
+    width: 4500px;
+    height: 100px;
+    position: absolute;
+}
+.ul2 li{
+    float: left;
+    padding-top: 20px;
+    height: 100px;
+    width: 545px;
+    box-sizing: border-box;
+}
+.ul2 li p{
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+    color: #000000;
+}
+.ul2 li p:hover {
+    color: #ff0000;
+}

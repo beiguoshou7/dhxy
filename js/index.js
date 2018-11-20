@@ -89,6 +89,7 @@ $(function(){
 
 
 
+
 ~function () {
     var i = 0;
 
@@ -141,7 +142,47 @@ $(function(){
         $(".gundong-box").animate({left:i+"px"}
             ,1)},30)
 
-    /*   $(".cal-prev").click(function(){
-           $(".slide-wrapper").css({"transform":translateX=translateX("-545"+"px")})
-       })*/
+$(function () {
+        let tIndex1 = 0;
+        let bIndex1 = 0;
+        $(".bannerBox .ul2 li:first-child").clone(true).appendTo($(".bannerBox ul"))
+
+        function next() {
+            tIndex1++
+            bIndex1++
+            if (tIndex1 > $(".bannerBox .ul2 li").length - 1) {
+                tIndex1 = 1
+                $(".bannerBox ul").css("left", 0).stop().animate({
+                    "left": -545
+                })
+            }
+            if (tIndex1 == $(".bannerBox .ul2 li").length - 1) {
+                bIndex1 = 0
+            }
+            $(".bannerBox  .ul2").stop().animate({
+                "left": -tIndex1 * 545
+            })
+        }
+
+        $(".cal-prev").click(function () {
+            tIndex1--;
+            bIndex1--;
+            if (tIndex1 < 0) {
+                tIndex1 = $(".bannerBox  .ul2  li").length - 2
+                $(".bannerBox  .ul2").css("left", -545*7).stop().animate({
+                    "left": -545*6
+                })
+            }
+            if (bIndex1 < 0) {
+                bIndex1 = $(".bannerBox  .ul2 li").length - 2
+            }
+            $(".bannerBox .ul2").stop().animate({
+                "left": -tIndex1 * 545
+            })
+        })
+        $(".cal-next").click(function () {
+            next()
+        })
+
+    })
 })
